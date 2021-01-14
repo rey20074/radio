@@ -1,4 +1,3 @@
-import org.junit.internal.ExactComparisonCriteria;
 
 public class Radio{
     int Estado=0;
