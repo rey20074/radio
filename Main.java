@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
-        Radio radio=new Radio();
+        RadioArchRey radio=new RadioArchRey();
         Scanner scan=new Scanner(System.in);
 
         int opcion=0,opcion1=0;
