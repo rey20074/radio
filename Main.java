@@ -52,7 +52,7 @@ public class Main{
 		
 		while(radio.isOn()==true) {
 			
-			System.out.println("?Que acción desea realizar? "+ "\n1. Apagar " + "\n2. Escoger frecuencia (AM O FM) "+"\n3. Guardar una Emisora" + "\n4. Siguiente emisora " + "\n5. Anterior emisora ");
+			System.out.println("¿Que acción desea realizar? "+ "\n1. Apagar " + "\n2. Cambiar AM a FM y FM a AM "+"\n3. Guardar una Emisora" +"\n4. Elegir Emisora"+"\n5. Siguiente emisora " + "\n6. Anterior emisora ");
 			opcion1=scan.nextInt();
 			
 			try {
@@ -69,18 +69,23 @@ public class Main{
 					radio.frecuencia();
 					break;
 				case 3:
-					radio.asignar();
+					System.out.println("Elija el botón donde desea guardar su emisora, del 1 al 12");
+					int a=scan.nextInt();
+					radio.asignar(a);
 					break;
 				case 4:
-					radio.incrementar();
+					System.out.println("Elija el botón a reproducir, del 1 al 12");
+					int b=scan.nextInt();
+					radio.emisoras(b);
 					break;
 				case 5:
+					radio.incrementar();
+					break;
+				case 6:
 					radio.disminuir();
 					break;
 				default:
 					System.out.println("Fuera de rango...");
-					
-				
 				
 				}
 				
