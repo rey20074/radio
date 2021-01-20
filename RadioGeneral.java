@@ -10,9 +10,9 @@ public interface RadioGeneral {
 
   void disminuir();
 
-  void asignar();
+  boolean asignar(int a);
 
-  void emisoras();
+  boolean emisoras(int a);
 
   void frecuencia();
 

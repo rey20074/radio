@@ -63,12 +63,14 @@ public class RadioArchRey implements RadioGeneral{
 
   }
 
-  public void asignar(){
-
+  public boolean asignar(int a){
+    boolean prueba=true;
+    return prueba;
   }
 
-  public void emisoras(){
-
+  public boolean emisoras(int a){
+    boolean prueba=true;
+    return prueba;
   }
 
   public void frecuencia(){
