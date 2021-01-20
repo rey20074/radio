@@ -11,7 +11,7 @@ public class Main{
 		
 		while (radio.isOn()==false) {
 
-			System.out.println("�Desea encender la radio?" + "\n1. SI " + "\n2. NO");
+			System.out.println("¿Desea encender la radio?" + "\n1. SI " + "\n2. NO");
 			opcion=scan.nextInt();
 				
 			try {
@@ -52,7 +52,7 @@ public class Main{
 		
 		while(radio.isOn()==true) {
 			
-			System.out.println("�Que acci�n desea realizar? "+ "\n1. Apagar " + "\n2. Escoger frecuencia (AM O FM) "+"\n3. Guardar una Emisora" + "\n4. Siguiente emisora " + "\n5. Anterior emisora ");
+			System.out.println("?Que acción desea realizar? "+ "\n1. Apagar " + "\n2. Escoger frecuencia (AM O FM) "+"\n3. Guardar una Emisora" + "\n4. Siguiente emisora " + "\n5. Anterior emisora ");
 			opcion1=scan.nextInt();
 			
 			try {
