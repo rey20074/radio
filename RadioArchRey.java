@@ -13,7 +13,7 @@ public class RadioArchRey implements RadioGeneral{
   int boton11 = 0;
   int boton12 = 0;
   boolean encendido = false;
-  String frecuencia = "AM";
+  String frec = "AM";
 
     
   public boolean isOn(){
@@ -29,6 +29,9 @@ public class RadioArchRey implements RadioGeneral{
   }
 
   public void incrementar(){
+    if((this.frec).equals("AM")){
+      
+    }
 
   }
 
@@ -41,7 +44,11 @@ public class RadioArchRey implements RadioGeneral{
   }
 
   public void frecuencia(){
-
+    if ((this.frec).equals("AM")){
+      this.frec = "FM";
+    }else {
+      this.frec = "AM";
+    }
   }
 
 }
