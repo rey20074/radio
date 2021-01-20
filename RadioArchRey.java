@@ -14,7 +14,7 @@ public class RadioArchRey implements RadioGeneral{
   int boton12 = 0;
   boolean encendido = false;
   String frec = "AM";
-  int emiso = 530;
+  double emiso = 530;
 
     
   public boolean isOn(){
@@ -23,15 +23,14 @@ public class RadioArchRey implements RadioGeneral{
     }else{
       return false;
     }
-
   }
 
   public void encender(){
-
+    encendido=true;
   }
 
   public void apagar(){
-
+    encendido=false;
   }
 
   public void incrementar(){
@@ -49,11 +48,26 @@ public class RadioArchRey implements RadioGeneral{
 
   }
 
-  public boolean asignar(){
+  public void disminuir(){
+    if((this.frec).equals("AM")){
+      this.emiso = this.emiso -10;
+      if(this.emiso > 530){
+        this.emiso = 1610;
+      }
+    }else{
+      this.emiso = this.emiso - 0.2;
+      if(this.emiso < 87.9){
+        this.emiso = 107.9;
+      }
+    }
 
   }
 
-  public boolean emisora(){
+  public void asignar(){
+
+  }
+
+  public void emisoras(){
 
   }
 
