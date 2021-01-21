@@ -1,5 +1,13 @@
+/*
+Clase donde se crea la radio que implementa la interfaz radio General
+
+autores: Manuel Archila y Mariano Reyes
+
+ultima modificacion: 21/01/2021
+*/
 public class RadioArchRey implements RadioGeneral{
 
+  //atributos iniciales de la clase
   double boton1 = 0;
   double boton2 = 0;
   double boton3 = 0;
@@ -17,7 +25,7 @@ public class RadioArchRey implements RadioGeneral{
   private double emiso = 530;
 
     
-  //test
+  //metodo sobrescrito para comprobar el estado de la radio
   public boolean isOn(){
     if(this.encendido == true){
       return true;
@@ -25,15 +33,18 @@ public class RadioArchRey implements RadioGeneral{
       return false;
     }
   }
-
+  
+  //metodo sobrescrito para encender la radio
   public void encender(){
     encendido=true;
   }
 
+  //metodo sobrescrito para apagar la radio
   public void apagar(){
     encendido=false;
   }
 
+  //metodo sobrescrito para incrementar entre emisoras
   public void incrementar(){
     if((frec).equals("AM")){
       emiso = emiso +10;
@@ -49,6 +60,7 @@ public class RadioArchRey implements RadioGeneral{
     System.out.println("Esta es la emisora actual: "+emiso);
   }
 
+  //metodo sobrescrito para disminuir entre emisoras
   public void disminuir(){
     if((frec).equals("AM")){
       emiso = emiso -10;
@@ -65,6 +77,7 @@ public class RadioArchRey implements RadioGeneral{
   }
 
   //test para ver si le dan un 13 o no
+  //metodo sobrescrito para asignar emisoras a un boton
   public boolean asignar(int a){
     boolean prueba=true;
 
@@ -113,6 +126,7 @@ public class RadioArchRey implements RadioGeneral{
     return prueba;
   }
 
+  //metodo sobrescrito para poner la emisora almacenada en un boton
   public boolean emisoras(int a){
     boolean prueba=true;
 
@@ -233,6 +247,7 @@ public class RadioArchRey implements RadioGeneral{
     return prueba;
   }
 
+  //metodo sobrescrito para el cambio de frecuencias AM y FM
   public void frecuencia(){
     if ((frec).equals("AM")){
       frec = "FM";
@@ -244,6 +259,7 @@ public class RadioArchRey implements RadioGeneral{
     System.out.println("Esta es la frecuencia actual: "+frec);
   }
 
+  //getters de atributos privados
   public String getFrec(){
     return frec;
   }
