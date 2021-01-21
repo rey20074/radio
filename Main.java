@@ -1,6 +1,15 @@
+/*
+Clase general main donde se implementa la radio, muy parecida para toda la clase
+
+autores: Manuel Archila y Mariano Reyes
+
+ultima modificacion: 21/01/2021
+*/
 import java.util.Scanner;
 
 public class Main{
+	
+    //metodo principal donde se encuentra el menu principal
     public static void main(String[] args){
         RadioArchRey radio=new RadioArchRey();
         Scanner scan=new Scanner(System.in);
