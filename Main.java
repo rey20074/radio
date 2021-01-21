@@ -1,5 +1,16 @@
+/*
+Página principal
+Autores: 
+Alejandro Archila
+Mariano Reyes
+Ultima Modificación: 21/01/21
+
+Página principal para la creación del menú de la radio
+Este programa tiene como objetivo el crear una simulación de una radio
+*/
 import java.util.Scanner;
 public class Main{
+    //metodo main donde se trabaja el menu del programa
     public static void main(String[] args){
         RadioArchRey radio=new RadioArchRey();
         Scanner scan=new Scanner(System.in);
@@ -7,7 +18,7 @@ public class Main{
         int opcion=0,opcion1=0;
 
         System.out.println("------------RADIO--------------");
-
+        //mientras que el radio este apagado
         while (!radio.isOn()) {
 
             System.out.println("�Desea encender la radio?" + "\n1. SI " + "\n2. NO");
@@ -48,7 +59,7 @@ public class Main{
 
 
         }
-
+        //operaciones de la radio
         while(radio.isOn()==true) {
 
             System.out.println("�Que acci�n desea realizar? "+ "\n1. Apagar " + "\n2. Escoger frecuencia (AM O FM) "+"\n3. Guardar una Emisora" + "\n4. Siguiente emisora " + "\n5. Escoger una emisora.");
