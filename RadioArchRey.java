@@ -1,4 +1,14 @@
+/*
+Pagina del Radio
+Autores: 
+Alejandro Archila
+Mariano Reyes
+Ultima Modificación: 21/01/21
+
+Clase de Radio, donde se llevara a cabo las acciones de la radio.
+*/
 public class RadioArchRey implements RadioGeneral {
+  //atributos iniciales de la clase radio
   double boton1 = 550;
   double boton2 = 560;
   double boton3 = 720;
@@ -16,7 +26,7 @@ public class RadioArchRey implements RadioGeneral {
   private double emiso = 530;
 
 
-  //test
+  //metodo sobrescrito para verificar el estado de la radio
   public boolean isOn(){
       if(this.encendido == true){
           return true;
@@ -25,14 +35,17 @@ public class RadioArchRey implements RadioGeneral {
       }
   }
 
+  //metodo sobrescrito para encender el radio
   public void encender(){
       encendido=true;
   }
 
+  //metodo sobrescrito para apagar el radio
   public void apagar(){
       encendido=false;
   }
 
+  //metodo sobrescrito para incrementar la emisora del radio
   public void incrementar(){
       if((frec).equals("AM")){
           emiso = emiso +10;
@@ -48,6 +61,7 @@ public class RadioArchRey implements RadioGeneral {
       System.out.println("Esta es la emisora actual: "+emiso);
   }
 
+  //metodo sobrescrito para disminuir la emisora del radio
   public void disminuir(){
       if((frec).equals("AM")){
           emiso = emiso -10;
@@ -63,7 +77,7 @@ public class RadioArchRey implements RadioGeneral {
       System.out.println("Esta es la emisora actual: "+emiso);
   }
 
-  //test para ver si le dan un 13 o no
+  //metodo sobrescrito para asignar alguna emisora a algun boton
   public boolean asignar(int a){
       boolean prueba=true;
 
@@ -112,6 +126,7 @@ public class RadioArchRey implements RadioGeneral {
       return prueba;
   }
 
+  //metodo sobrescrito para reproducir alguna emisora almacenada en algun boton
   public boolean emisoras(int a){
       boolean prueba=true;
 
@@ -232,6 +247,7 @@ public class RadioArchRey implements RadioGeneral {
       return prueba;
   }
 
+  //metodo sobrescrito para cambiar la frecuencia de la radio
   public void frecuencia(){
       if ((frec).equals("AM")){
           frec = "FM";
@@ -243,6 +259,7 @@ public class RadioArchRey implements RadioGeneral {
       System.out.println("Esta es la frecuencia actual: "+frec);
   }
 
+  //getters de los atributos principales
   public String getFrec(){
       return frec;
   }
